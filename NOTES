@@ -1,0 +1,150 @@
+Types of blockchains:
+    -Public Blockchain:
+        - Permission-less, open, completely decentralized
+        - All nodes verify data
+        - Incentives to verifying data/mining blocks
+        - Shared/transparent ledger
+        - Secure with 51% rule
+            -???
+        - Hidden user identity
+        - No regulations
+        - No way to track transactions
+            -???
+    -Hybrid Blockchain:
+        - Certain parts of the chain are public, and some are private
+        - Customizable level of security, decentralization
+        - Balances transparency and decentralization
+    -Private Blockchain:
+        - Restricts access to only certain users
+        - Operate on closed network
+        - Permissions managed by an organization
+            - Not completely decentralized
+        - Used for supply-chain management,
+        asset ownership verification, and internal voting systems
+        - Organizations have more control over their data, less centralized though
+        - These are typically faster than public blockchains
+    - Federated/Consortium Blockchain:
+        - A consortium/group of nodes/organizations work together to confirm nodes
+        - These are permissioned, like private blockchains
+        - These are useful when a group of organizations need to share and confirm data
+            - Probably useful for sharing of data between hospitals
+        - Tend to be faster than public chains, but less decentralization
+Layers of a Blockchain:
+    - Hardware/Infrastructure Layer:
+        -
+    - Data Layer:
+        - Chain structure:
+            - The actual data structure of the chain is a linked list of blocks.
+            - Each block has a pointer to the hash of the block before it, and its transaction data
+            - The pointer maintains the order of the chain. Refers to location of other variables
+        - Block Structure:
+            - Determined in the data layer
+            - Merkle Tree:
+                - Tree of binary hashes that ensures integrity, security, and immutability
+                - It holds info like:
+                    - Previous block has
+                    - Datetime
+                    - Nonce
+                        - This is the number that makes the hash start with 30 zeros
+                    - Block version number
+                    - Current Difficulty Goal
+        - Digital Signature:
+            - Each transaction in the block must be digitally signed by the person who made it
+            to provide authentication and integrity
+            - Anyone with corresponding public key can verify the authenticity of a transaction
+                - ???
+    - Network Layer:
+        - Sometimes called the P2P layer.
+            - In p2p networks, all the nodes cooperate towards a certain goal. In this context,
+            they are trying to maintain validity of blockchain state
+        - Facilitates communication between nodes on the network
+        - Enables:
+            - Transactions
+            - Block Propagation
+                - ???
+            - Discovery of blocks in the network
+            - Effective communication between nodes
+            - Synchronization
+            - Information propagation
+        - This layer focuses on maintaining the validity of the blockchains state
+        - Node Types:
+            - Full
+                - These are responsible for mining, enforcing consensus rules, and validation
+            - Light
+                - Store blockchain headers, create/send transactions
+    - Consensus Layer:
+        - This layer orders, validates blocks, and facilitates agreement among nodes
+        - This establishes the rules/laws/conditions for agreement, integrity, and security
+        - Ensures there is no manipulation by ensuring agreement
+         on validity and order of transactions
+        - Enables collective decision making by all network participants
+    - Application/Presentation Layer:
+        - User interface
+        - Includes execution, smart contracts, scripts, and frameworks
+            - ???
+        - Communicate with the blockchain network through wallets, browsers, NFTs, or social media
+        - They communicate with an API
+            - The backend/database is the previous 4 layers.
+            - The api/frontend is this layer.
+        - Semantic layer:
+            - Contained within the application layer
+            - Where transaction validation and execution happens, which ensures integrity
+             and accuracy of transaction
+        - Users access and manage data within this application.
+            - This is where doctors could enter diagnosis/data.
+-Components of a blockchain:
+    - Block:
+        - Contains the most recent, unconfirmed transactions
+        - Once the block is confirmed by the network, it is immutable
+        #### BLOCK STRUCTURE ####
+            - Header:
+                - Previous Block Hash
+                - Nonce
+                - Merkle Tree Root Hash
+                - Difficulty Target
+                - Timestamp
+            - Body:
+                - Transactions
+            - Current Block Hash
+    - Ledger:
+        - The collection of immutable data stored in the block chain
+        - Permissionless:
+            - Every node has a copy that is updated live
+        - Permissionless:
+            - Authorized nodes have copy that is updated live
+    - Transparency:
+        - Every node of the network should be able to view and verify transactions
+        - That would include sender, receiver, amount, and all other transaction data
+    #### Confirmation ####
+        - Uses consensus algorithms to confirm transactions/blocks
+            - Proof of Work Consensus:
+                - This is where miners iteratively hash blocks with modulated nonces
+                    - Once a nonce that satisfies a condition (like hash starts with 30 zeros),
+                    the block is confirmed and added to the chain.
+                    - Hashing blocks takes as much computing power as needed to ensure that
+                    a block is created every X minutes. The amount of zeros that a block must
+                    start with is the parameter that changes how hard the blocks are to mine. This
+                    is called block discovery rate.
+                    - Mining is very expensive, computationally, monetarily, and environmentally.
+                    It is incentivized by offering rewards to successful block miners.
+                    - There are also transaction fees that are awarded to the successful miner.
+    #### TRANSACTIONS/UTXO ####
+        - Fundamental transfer of data:
+            - Sender address
+            - Recipient address
+            - Amount
+            - Date
+            - Transaction fee
+            - More
+        - UTXO:
+            - Stands for Unspent Transaction Output
+            - 1 or more UTXOs are created with each transaction, and they represent unspent outputs
+            associated with a specific transaction, and specific address.
+            - Each UTXO is associated with 1 and only 1 address, and can only be spent by that address
+            - 
+
+
+
+
+
+
